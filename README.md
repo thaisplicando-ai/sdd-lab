@@ -1,43 +1,37 @@
-# SDD Lab — versão portátil
+# SDD Lab — DoaCerto
 
-Este pacote contém o laboratório existente (oficina e cupom). O conteúdo ainda não foi adaptado ao DoaCerto.
+Laboratório interativo de Spec-Driven Development com OpenSpec. **DoaCerto** é o exemplo principal; cupom de desconto permanece como exemplo secundário. O laboratório web ajuda a explorar requisitos, escrever regras e critérios de aceite, visualizar artefatos, revisar e experimentar um modelo didático.
 
 ## Abrir localmente
 
-Na pasta com index.html, execute:
+Na pasta deste repositório:
 
-    python3 -m http.server 8000
+```sh
+python3 -m http.server 8000
+```
 
-Abra http://localhost:8000. Não abra o HTML diretamente com file://, pois o site usa módulos JavaScript.
+Abra `http://localhost:8000`. O site usa módulos JavaScript, portanto deve ser servido por HTTP. Ele salva sessões no `localStorage` do navegador; use “Salvar sessão” para transportar uma cópia JSON.
 
-## Publicar gratuitamente no GitHub Pages
+## Para o webinar e o VS Code
 
-1. Crie um repositório público no GitHub (por exemplo sdd-lab).
-2. Extraia este ZIP e coloque os arquivos na raiz do repositório. index.html deve ficar na raiz.
-3. Faça commit e push na branch main.
-4. Abra Settings > Pages.
-5. Em Source, escolha Deploy from a branch.
-6. Escolha main e /(root), depois Save.
-7. Quando a implantação terminar, abra a URL mostrada pelo GitHub.
+- [DOACERTO_VSCODE.md](DOACERTO_VSCODE.md): roteiro de 30 minutos, decisões, instalação, comandos OpenSpec, prompts para o agente, revisão, testes e evidências do hackathon.
+- [DOACERTO_SPEC.md](DOACERTO_SPEC.md): especificação de referência completa, pronta para copiar para `openspec/changes/gerenciar-doacoes/specs/doacoes/spec.md` no projeto Python.
 
-O arquivo .nojekyll já está incluído. A autenticação da hospedagem anterior não faz parte deste código.
+O site exporta **rascunhos** dos artefatos OpenSpec conforme as edições feitas na interface. Ele não chama uma API de IA, não executa a CLI do OpenSpec e não roda Python. O projeto Python `doacerto/` é criado separadamente no VS Code, com Python 3, biblioteca padrão e `unittest`.
 
-## Estrutura
+## Estrutura deste repositório
 
-- index.html: estrutura da página.
-- style.css: estilos.
-- core.mjs: etapas, exemplos, regras de revisão e artefatos OpenSpec.
-- app.mjs: navegação, edição, simulações, importação/exportação.
+- `index.html`: estrutura da página.
+- `style.css`: estilos.
+- `core.mjs`: etapas, exemplos, revisão e artefatos.
+- `app.mjs`: navegação, edição, simulações e exportação.
 
-As sessões ficam no localStorage de cada navegador. Elas não são compartilhadas entre pessoas ou dispositivos. Baixe uma sessão JSON no site para transportá-la. O site não chama uma API de IA e não executa Python ou a CLI do OpenSpec.
+## Publicar no GitHub Pages
 
-## Adaptar para DoaCerto
+Coloque os arquivos na raiz de um repositório público e ative **Settings → Pages → Deploy from a branch → main → /(root)**. O `index.html` deve permanecer na raiz.
 
-Substitua os exemplos e as regras originais de core.mjs e as simulações e explicações de app.mjs. Não basta alterar o nome na capa: requisitos, perguntas, cenários, design, relatórios e simulações precisam seguir o mesmo domínio. Use uma chave diferente de localStorage para que sessões antigas não se misturem.
+## Crie seu próprio projeto no laboratório
 
-O aplicativo Python do DoaCerto deve permanecer em um projeto separado, com Python 3, biblioteca padrão e unittest. Não é necessário hospedá-lo para demonstrar a aplicação de terminal.
+Escolha **Meu projeto** na primeira etapa. Escreva o pedido, quem será atendido, o problema e o objetivo. Nas etapas seguintes, edite e responda perguntas, crie requisitos com resultados observáveis e escreva cenários de sucesso, erro e limite. Em **Artefatos OpenSpec**, confira a proposta, a spec, o design e as tarefas; baixe o ZIP. Em **Revisar e experimentar**, selecione um cenário e compare o resultado esperado com o que observou em um protótipo ou teste.
 
-## Referências
-
-https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
-https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+O botão **Entenda o OpenSpec** explica o papel de cada arquivo, `SHALL`/`MUST` e os comandos do agente. A comparação do projeto próprio é uma revisão guiada: a página não interpreta regras livres nem executa a implementação. Leve o ZIP para um repositório inicializado com OpenSpec, valide os artefatos com a CLI e rode os testes do produto.
