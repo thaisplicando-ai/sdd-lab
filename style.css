@@ -23,3 +23,13 @@ main{max-width:1450px;margin:auto;padding:35px 42px 0;outline:0}.intro{display:f
 @media(max-width:680px){.example-picker{grid-template-columns:1fr}.example-icon{display:grid}.example strong{font-size:12px}.example small{font-size:8px}}
 #modalBody{max-height:calc(90vh - 72px);overflow-y:auto}
 @media(max-width:680px){.top-actions{flex-wrap:wrap;padding:8px 0}.top-actions .button{font-size:9px;padding:7px 8px}}
+.req-instruction{margin:0 25px 14px;padding:13px 15px;border:1px solid #e4ead9;background:#f5f8ef;border-radius:7px;font-size:11px;line-height:1.7;color:#6a7b60}
+.req-instruction strong{color:#4f6c4e}
+.requirement-editor-list{padding:0 25px 20px;display:flex;flex-direction:column;gap:14px}
+.requirement-editor{border:1px solid #dfe7d9;border-radius:9px;padding:17px 18px;background:#fff}
+.requirement-editor-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:17px}
+.scope-choice{display:flex;align-items:center;gap:8px;font-size:11px;color:#56704e;cursor:pointer}
+.scope-choice input{accent-color:#437552;width:16px;height:16px}
+.requirement-editor .field{margin-bottom:12px}
+.requirement-editor .field:last-child{margin-bottom:0}
+@media(max-width:680px){.req-instruction{margin:0 20px 14px}.requirement-editor-list{padding:0 20px 20px}.requirement-editor-head{align-items:flex-start}}

@@ -32,6 +32,6 @@ Coloque os arquivos na raiz de um repositório público e ative **Settings → P
 
 ## Crie seu próprio projeto no laboratório
 
-Escolha **Meu projeto** na primeira etapa. Escreva o pedido, quem será atendido, o problema e o objetivo. Nas etapas seguintes, edite e responda perguntas, crie requisitos com resultados observáveis e escreva cenários de sucesso, erro e limite. Em **Artefatos OpenSpec**, confira a proposta, a spec, o design e as tarefas; baixe o ZIP. Em **Revisar e experimentar**, selecione um cenário e compare o resultado esperado com o que observou em um protótipo ou teste.
+Escolha **Meu projeto** na primeira etapa. Escreva o pedido, quem será atendido, o problema e o objetivo. Na etapa **Explorar requisitos**, marque o que entra no escopo e preencha **Nome do requisito** e **O que o sistema deve garantir?**; depois responda às perguntas. Na etapa seguinte, refine a redação da spec. Escreva cenários de sucesso, erro e limite. Em **Artefatos OpenSpec**, confira a proposta, a spec, o design e as tarefas; baixe o ZIP. Em **Revisar e experimentar**, selecione um cenário e compare o resultado esperado com o que observou em um protótipo ou teste.
 
 O botão **Entenda o OpenSpec** explica o papel de cada arquivo, `SHALL`/`MUST` e os comandos do agente. A comparação do projeto próprio é uma revisão guiada: a página não interpreta regras livres nem executa a implementação. Leve o ZIP para um repositório inicializado com OpenSpec, valide os artefatos com a CLI e rode os testes do produto.
